@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyper Demo Site</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Keyper Demo Site</h1>
+    <div id="keyperStatus">
+      Checking Keyper status...
+    </div>
+  </header>
+
+  <main>
+    <section id="publicContent">
+      <h2>Public Content</h2>
+      <p>This content is visible to everyone. To access premium content, you need to:</p>
+      <ol>
+        <li>Install the Keyper Chrome extension</li>
+        <li>Own at least 1 KAT (Keyper Access Token)</li>
+      </ol>
+    </section>
+
+    <section id="premiumContent" style="display: none;">
+      <h2>Premium Content</h2>
+      <div class="premium-box">
+        <h3>Welcome, Token Holder!</h3>
+        <p>You have successfully authenticated with your KAT token.</p>
+        <p>Your IOTA address: <span id="userAddress" class="address"></span></p>
+        <div class="premium-feature">
+          <h4>Exclusive Content</h4>
+          <p>This is an example of premium content that only KAT holders can see.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="errorContent" style="display: none;">
+      <h2>Access Error</h2>
+      <p>Unable to verify your KAT token balance. Please make sure:</p>
+      <ul>
+        <li>The Keyper extension is installed and enabled</li>
+        <li>You have at least 1 KAT in your wallet</li>
+        <li>Your wallet is properly connected</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html> 

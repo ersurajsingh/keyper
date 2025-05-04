@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyper</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .status {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .enabled {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+    .disabled {
+      background-color: #ffebee;
+      color: #c62828;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    .address {
+      word-break: break-all;
+      font-family: monospace;
+      padding: 10px;
+      background: #f5f5f5;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Keyper</h2>
+  <div id="status" class="status enabled">Keyper is active</div>
+  <div class="address" id="address">Loading address...</div>
+  <button id="toggleButton">Disable Keyper</button>
+  <script src="popup.js"></script>
+</body>
+</html> 

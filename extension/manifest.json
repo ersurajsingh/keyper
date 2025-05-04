@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Keyper",
+  "version": "1.0",
+  "description": "IOTA-based access control system for websites",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["injected.js"],
+    "matches": ["<all_urls>"]
+  }],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "popup/icons/icon16.png",
+      "48": "popup/icons/icon48.png",
+      "128": "popup/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "popup/icons/icon16.png",
+    "48": "popup/icons/icon48.png",
+    "128": "popup/icons/icon128.png"
+  }
+} 
